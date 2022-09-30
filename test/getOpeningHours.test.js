@@ -35,4 +35,10 @@ describe('Testes da função getOpeningHours', () => {
   it('Verifica se se retorna um erro \'The minutes should represent a number\' ao inserir \'Sunday\' e \'09:c0-AM\' como parametros', () => {
     expect(() => getOpeningHours('Sunday', '09:c0-AM')).toThrow('The minutes should represent a number');
   });
+  it('Verifica se se retorna um erro \'The hour must be between 0 and 12\' ao inserir \'Monday\' e \'13:00-AM\' como parametros', () => {
+    expect(() => getOpeningHours('Monday', '13:00-AM')).toThrow('The hour must be between 0 and 12');
+  });
+  it('Verifica se se retorna um erro \'The minutes must be between 0 and 59\' ao inserir \'Tuesday\' e \'09:60-AM\' como parametros', () => {
+    expect(() => getOpeningHours('Tuesday', '09:60-AM')).toThrow('The minutes must be between 0 and 59');
+  });
 });
