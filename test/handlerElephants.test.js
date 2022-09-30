@@ -1,7 +1,7 @@
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
-  it('Verifica se a função existe', () => {
+  it('Verifica se a função retorna undefined ao não inserir parametros', () => {
     expect(handlerElephants()).toBeUndefined();
   });
   it('Verifica se só aceita string', () => {
