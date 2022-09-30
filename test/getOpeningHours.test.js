@@ -23,4 +23,16 @@ describe('Testes da função getOpeningHours', () => {
   it('Verifica se se retorna \'The zoo is closed\' ao inserir \'Wednesday\' e \'09:00-AM\' como parametros', () => {
     expect(getOpeningHours('Wednesday', '09:00-PM')).toBe('The zoo is closed');
   });
+  it('Verifica se se retorna um erro \'The day must be valid. Example: Monday\' ao inserir \'Thu\' e \'09:00-AM\' como parametros', () => {
+    expect(() => getOpeningHours('Thu', hor9H)).toThrow('The day must be valid. Example: Monday');
+  });
+  it('Verifica se se retorna um erro \'The abbreviation must be \'AM\' or \'PM\'\' ao inserir \'Friday\' e \'09:00-ZM\' como parametros', () => {
+    expect(() => getOpeningHours('Friday', '09:00-ZM')).toThrow('The abbreviation must be \'AM\' or \'PM\'');
+  });
+  it('Verifica se se retorna um erro \'The hour should represent a number\' ao inserir \'Saturday\' e \'C9:00-AM\' como parametros', () => {
+    expect(() => getOpeningHours('Saturday', 'C9:00-AM')).toThrow('The hour should represent a number');
+  });
+  it('Verifica se se retorna um erro \'The minutes should represent a number\' ao inserir \'Sunday\' e \'09:c0-AM\' como parametros', () => {
+    expect(() => getOpeningHours('Sunday', '09:c0-AM')).toThrow('The minutes should represent a number');
+  });
 });
