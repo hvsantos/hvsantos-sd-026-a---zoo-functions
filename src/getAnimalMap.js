@@ -38,6 +38,4 @@ function getAnimalMap(options) {
   return obj;
 }
 
-console.log(getAnimalMap({ includeNames: true, sorted: true }));
-
 module.exports = getAnimalMap;
