@@ -10,7 +10,7 @@ Javascript
 ## Clone the project
 
 ```bash
-  git clone https://github.com/hvsantos/projeto---Zoo-Functions
+  git clone https://github.com/hvsantos/projeto---Zoo-Functions.git
 ```
 
 Go to the project directory
