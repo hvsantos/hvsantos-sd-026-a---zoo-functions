@@ -1,6 +1,6 @@
 # Projeto Zoo Functions
 
-Projeto com o intuito de práticar o uso e manipulação de dados utilizando HOFs.
+Ultimo projeto realizado no módulo de Fundamentos, tendo como intuito a prática do uso e manipulação de dados utilizando HOFs.
 
 
 ## 🛠 Skills
